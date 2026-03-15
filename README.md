@@ -1,11 +1,15 @@
-# Bilingual-Pragmatic-Safety
-Cross-Lingual Vulnerabilities in Safety Alignment: Pragmatic Evasion in Korean-English LLMs
+# Pragmatic Evasion: Why "Politeness" is a Safety Risk
 
-#Title: Cross-Lingual Vulnerabilities in Safety Alignment: Pragmatic Evasion in Korean-English LLMs
+### The Problem
+Most AI safety alignment is optimized for English-centric directness. This project demonstrates that **Korean Honorifics (존댓말)** and high-register linguistic patterns can be used to bypass safety guardrails. When a harmful intent is wrapped in "extreme politeness," many models fail to recognize the underlying violation.
 
-#Abstract:
-Current AI safety guardrails are predominantly trained on English datasets, leading to a "safety tax" or "alignment gap" in low-resource or morphologically complex languages. This research investigates Pragmatic Evasion, where harmful intent is disguised through Korean-specific linguistic features such as Honorifics (존댓말) and Euphemisms (완곡어법). We demonstrate that models which successfully refuse a harmful request in English often comply when the same intent is phrased with high-register politeness or indirect metaphors in Korean. This project provides a bilingual red-teaming dataset to evaluate the cross-lingual consistency of safety filters.
+### Research Thesis
+This is a study on **Pragmatic Evasion**. We argue that safety filters are often "blind" to indirect speech acts. A model that refuses a rude request in English may comply with a polite, metaphorical version in Korean, highlighting a critical "Safety Tax" for non-English users.
 
-#Key Citations:
-Yong et al. (2023), Low-Resource Languages and the Safety Gap: "Safety alignment does not always transfer across languages, leaving non-English users at higher risk."
-Wong (2024), The Pragmatics of Jailbreaking: "Indirect speech acts are more effective at bypassing intent classifiers than direct commands."
+### Key Deliverables
+* **Bilingual_Adversarial_Pairs.json**: A dataset mapping direct English refusals to successful Korean "polite" bypasses.
+* **Linguistic_Analysis.md**: A breakdown of how register and honorifics lower the model's refusal threshold.
+
+### References
+* Yong, S. S., et al. (2023). *Low-Resource Languages and the Safety Gap*.
+* Wong, R. (2024). *The Pragmatics of Jailbreaking*.
